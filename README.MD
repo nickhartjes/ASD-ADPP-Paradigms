@@ -1,0 +1,1 @@
+Vistit [my blog about paradigms](https://nickhartjes.github.io/ASD-ADPP-Paradigms/)
