@@ -47,6 +47,7 @@ Objectgeoriënteerd programmeren (object oriented programming) verenigt berekeni
 | Scala                | 29       | 0.442%  |
 
 #### PyPL Index Oktober 2019
+
 | Programming Language | Rank | share  |
 |----------------------|------|--------|
 | Clojure              | -    | -      |
@@ -59,6 +60,7 @@ Objectgeoriënteerd programmeren (object oriented programming) verenigt berekeni
 | Scala                | 16   | 1.15 % |
 
 #### Stackoverflow Survey 2019 - Mosted used
+
 | Programming Language | Rank | share |
 |----------------------|------|-------|
 | Clojure              | 24   | 1.50% |
@@ -71,6 +73,7 @@ Objectgeoriënteerd programmeren (object oriented programming) verenigt berekeni
 | Scala                | 20   | 4.20% |
 
 #### Stackoverflow Survey 2019 - Mosted loved
+
 | Programming Language | Rank | share  |
 |----------------------|------|--------|
 | Clojure              | 7    | 68.30% |
@@ -83,6 +86,7 @@ Objectgeoriënteerd programmeren (object oriented programming) verenigt berekeni
 | Scala                | 17   | 58.03% |
 
 #### Overview
+
 | Ranking | Programming Language | Tiobe | PyPL | SO - MU | SO – ML |
 |---------|----------------------|-------|------|---------|---------|
 | 1       | R                    | 15    | 7    | 16      | 20      |
