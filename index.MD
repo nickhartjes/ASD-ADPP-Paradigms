@@ -218,16 +218,91 @@ Tevreden ben ik wanneer ik na afloop alle unit testen op groen heb staan. Dat is
 - **R**ealistisch - Na een kleine analyse haalbaar, ondanks het gebrek van kennis over de taal Rust.
 - **T**ijdgebonden - Binnen 5 uur
 
-Ik plaats de start code in mijn eigen repository op [Github.com](https://github.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise) en ga aan de slag.
+Ik wil gebruik gaan maken van een adjacency matrix om de domino stenen in bij te houden. Dit geeft me een eenvoudige manier om te zoeken of er domino stenen zijn die aangrenzend zijn.
 
+![Matrix](https://nickhartjes.github.io/ASD-ADPP-Paradigms/assets/images/paper-matrix.jpg)
+
+De eeste stappen zijn dus om de matrix te maken.
+
+~~~rust
+use crate::MatrixActions::{ADD, REMOVE};
+
+enum MatrixActions {
+    ADD,
+    REMOVE,
+}
+
+pub fn chain(input: &[(u8, u8)]) -> Option<Vec<(u8, u8)>> {
+    // If the input is empty, return directly.
+    if input.is_empty() {
+        return Some(vec![]);
+    }
+
+    create_matrix(input));
+}
+
+fn create_matrix(input: &[(u8, u8)]) -> Vec<Vec<u8>> {
+    // Creates a 2d Vector matrix from given domino slices
+    let matrix_size: usize = 7;
+    let mut matrix: Vec<Vec<u8>> = vec![vec![0; matrix_size]; matrix_size];
+
+    // Loop the slice input, that contains tuples of u8
+    for domino in input {
+        matrix = update_matrix(*domino, matrix, ADD);
+    }
+    matrix
+}
+
+fn update_matrix(domino: (u8, u8), matrix: Vec<Vec<u8>>, action: MatrixActions) -> Vec<Vec<u8>> {
+    let mut tmp_matrix = matrix.clone();
+    let row_location = domino.0 as usize;
+    let column_location = domino.1 as usize;
+    match action {
+        ADD => tmp_matrix[row_location][column_location] = 1,
+        REMOVE => tmp_matrix[row_location][column_location] = 0,
+    };
+    tmp_matrix
+}
+~~~
+
+Toen liep ik eigenlijk tegen het eerste probleem aan, als IDE gebruik [IntelliJ](https://www.jetbrains.com/idea/) van Jetbrain, met de Rust plugin. Dat werkte tot nu toe perfect.. alleen werkt de debugger niet. Hoe moest ik nu controlleren of mijn matrix wel correct gevuld werd. Dus uiteindelijk maar een print functie geschreven die de 2d Vector weergeeft op het scherm.
+
+~~~rust
+fn print_matrix(matrix: Vec<Vec<u8>>) {
+    // Prints the given matrix in a 2d shape
+    // Columns an row numbers are shown
+    // Example:
+    //   0  1  2  3  4  5  6
+    //0 [0, 0, 0, 0, 0, 0, 0]
+    //1 [0, 0, 1, 0, 0, 0, 0]
+    //2 [0, 0, 0, 1, 0, 0, 0]
+    //3 [0, 1, 0, 0, 0, 0, 0]
+    //4 [0, 0, 0, 0, 0, 0, 0]
+    //5 [0, 0, 0, 0, 0, 0, 0]
+    //6 [0, 0, 0, 0, 0, 0, 0]
+    for (row_count, row) in matrix.iter().enumerate(){
+        if row_count == 0 {
+            print!("  ");
+            for x in 0..row.len() {
+                print!(" {} ", x);
+            }
+            println!();
+        }
+        print!("{} ", row_count);
+        println!("{:?}", row);
+    }
+}
+~~~
+
+Normaal zou ik niet direct naar de print of prinln wat schrijven, eerder naar een logger. Maar voor deze case vond ik het eigenlijk goed genoeg. De matrix representeerd welke dominoes nog beschikbaar zijn.
 
 
 
 [Dominoes uitwerking op repl.it](https://repl.it/@nickhartjes/ASD-ADPP-Paradigms-Rust-Dominoes-Exercise)
-
 [Source code op Github.com](https://github.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise)
-[Build runner / action in Github.com](https://github.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise/commit/7f70b8a457082b7d940868f8c3368ea06dce4aba/checks?check_suite_id=323149345)
 
+Helaas kon ik `cargo test` niet runnen op repl.it. Dus repl.it is wel ideaal om de applicatie te delen en online uit te voeren, maar niet ideaal om geautotiseerd mee te bouwen en te testen. Dus daarom heb ik ook gebruik gemaakt van de build runner van Github en Travis-CI om geautomatiseerd de code te builden, testen en uit te voeren.
+[Build runner / action in Github.com](https://github.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise/commit/7f70b8a457082b7d940868f8c3368ea06dce4aba/checks?check_suite_id=323149345)
 [Build runner in Travis-CI](https://travis-ci.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise/builds/137675737)
 
 ### Bronnen voor het blog
