@@ -1,10 +1,10 @@
-# Rust roest
 
-[toc]
+
+# Rust roest
 
 ## Inleiding
 
-"Rust roest" en dan heb ik het niet over de [televisieserie](https://nl.wikipedia.org/wiki/Rust_roest_(televisieserie)), maar dan heb ik het over het [spreekwoord](https://www.dbnl.org/tekst/stoe002nede01_01/stoe002nede01_01_2040.php). Het spreekwoord is ontleent aan ijzer, dat wanneer het gebruikt word blank blijft, maar wanneer het stil ligt gaat roesten. Dit gaat natuurlijk ook op in de wereld van programmeurs. Er blijft een continue stroom van nieuwe informatie komen, nieuwe technieken, andere talen, meer gespecializeerde frameworks, handige tools en ga zo maar door. Want zwem je niet met de stroom mee, ga je roesten. Gedoemd tot een leven lang leren? Of steeds een nieuwe uitdaging om enthausiast van te worden. In mijn blog wil ik jullie meenemen in een nieuwe uitdaging die ik mezelf gegeven heb.
+"Rust roest" en dan heb ik het niet over de [televisieserie](https://nl.wikipedia.org/wiki/Rust_roest_(televisieserie)), maar dan heb ik het over het [spreekwoord](https://www.dbnl.org/tekst/stoe002nede01_01/stoe002nede01_01_2040.php). Het spreekwoord is ontleent aan ijzer, dat wanneer het gebruikt word blank blijft, maar wanneer het stil ligt gaat roesten. Dit gaat natuurlijk ook op in de wereld van programmeurs. Er blijft een continue stroom van nieuwe informatie komen, nieuwe technieken, andere talen, meer gespecialiseerde frameworks, handige tools en ga zo maar door. Want zwem je niet met de stroom mee, dan ga je roesten. Gedoemd tot een leven lang leren? Of steeds een nieuwe uitdaging om enthousiast van te worden. In mijn blog wil ik jullie meenemen in een nieuwe uitdaging die ik mezelf gegeven heb.
 
 ## De uitdaging
 
@@ -25,7 +25,7 @@ De belangrijkste programmeerparadigma's zijn:
 
 In **imperatief programmeren** is een programma in essentie een reeks instructies die het geheugen manipuleren en die op volgorde door de computer worden uitgevoerd. Deze stijl van programmeren staat dicht bij de werking van een computer en werden derhalve als eerste praktisch gerealiseerd.
 
-**Functioneel programmeren** is gebaseerd op formalismen zoals de theorie van recursieve functies of de lambdacalculus-programma's. Hieronder worden wiskundige functies gedefinieerd die invoer naar uitvoer transformeren.
+**Functioneel programmeren** is gebaseerd op formalismen zoals de theorie van recursieve functies of de lambda calculus-programma's. Hieronder worden wiskundige functies gedefinieerd die invoer naar uitvoer transformeren.
 
 Bij **logisch programmeren**, gebaseerd op (doorgaans) predicatenlogica, zijn het definities van predicaten die een bepaalde relatie tussen objecten in het geheugen uitdrukken.
 
@@ -35,9 +35,9 @@ Bij **logisch programmeren**, gebaseerd op (doorgaans) predicatenlogica, zijn he
 
 ### De keuze
 
-Om makkelijker te kunnen kiezen heb ik een shortlist gemaakt van potentiele talen, en een overzicht gemaakt van paradigma's waarin deze talen vallen.
+Om makkelijker te kunnen kiezen heb ik een shortlist gemaakt van potentiële talen, en een overzicht gemaakt van paradigma's waarin deze talen vallen.
 
-
+##### Language and paradigma's
 | Language | Intended use                  | Imperative | Object-oriented | Functional | Procedural | Generic | Reflective | Event-driven | Other paradigm(s)            | Standardized?                                            |
 | -------- | ----------------------------- | ---------- | --------------- | ---------- | ---------- | ------- | ---------- | ------------ | ---------------------------- | -------------------------------------------------------- |
 | Clojure  | General                       |            |                 | Yes        |            |         |            |              | concurrent                   | No                                                       |
@@ -51,11 +51,11 @@ Om makkelijker te kunnen kiezen heb ik een shortlist gemaakt van potentiele tale
 
  [Bron: Comparison of programming languages. (2019, October 10)](https://en.wikipedia.org/wiki/Comparison_of_programming_languages)
 
-Wat direct opvalt, is dat er een aantal talen zijn die heel puur in 1 paradigma vallen zoals Clojure en Erlang. Maar dat er veel talen zijn die onder meer paradigma's vallen. Dan is het dus aan de programmeur om het op de juiste manier te gebruiken.
+Wat direct opvalt, is dat er een aantal talen zijn die heel puur in één paradigma vallen zoals Clojure en Erlang. Maar dat er veel talen zijn die onder meer paradigma's vallen. Dan is het dus aan de programmeur om het op de juiste manier te gebruiken.
 
-Maar een keuze maken is, en blijft ik nog steeds lastig met de huidige gegevens. Uiteindelijk heb ik er voor gekozen om me iets meer te verdiepen in de populariteit van dit moment van de talen in de shortlist. 
+Maar een keuze maken is, en blijf ik nog steeds lastig met de huidige gegevens. Uiteindelijk heb ik er voor gekozen om me iets meer te verdiepen in de populariteit van de talen van dit moment, deze heb ik in een shortlist gezet. 
 
-Ik ben op onderzoek uitgegaan en vond een aantal indices die de populariteit van programmeertalen weergegeven. Elke index berekent de polulariteit zijn eigen manier, maar als je alles samenvoegt geeft het wel een goede indicatie hoe populair een taal is.
+Ik ben op onderzoek uitgegaan en vond een aantal indices die de populariteit van programmeertalen weergegeven. Elke index berekent de populariteit zijn eigen manier, maar als je alles samenvoegt geeft het wel een goede indicatie hoe populair een taal is.
 Je kunt je natuurlijk de vraag stellen of het belangrijk is, of een taal populair is.  Maar de populariteit impliceert wel dat de community die de taal ondersteund groot is. En dat de kans dat je de taal ooit op het werk gaat gebruiken ook groter is.
 
  
@@ -135,25 +135,69 @@ Je kunt je natuurlijk de vraag stellen of het belangrijk is, of een taal populai
 | 7       | Erlang               | 50    |      |         | 22      |
 | 8       | Occam                |       |      |         |         |
 
-Nadat ik alle resultaten naast elkaar heb gezet blijken R, Rust en Scala de meest populaire talen van de shortlist. Uiteindelijk heb ik gekozen, zoals de titel waarschijnljik al wel doet vermoeden, voor Rust. De reden hiervoor is dat het als "mosted loved" taal uit de Stackoverflow survey komt, en het stond samen met [GO](https://golang.org/) al eerder op mijn lijst als intressante talen, dus een win win.
+Nadat ik alle resultaten naast elkaar heb gezet blijken R, Rust en Scala de meest populaire talen van de shortlist. Uiteindelijk heb ik gekozen, zoals de titel waarschijnlijk al wel doet vermoeden, voor Rust. De reden hiervoor is dat het als "mosted loved" taal uit de Stackoverflow survey komt, en het stond samen met [GO](https://golang.org/) al eerder op mijn lijst als interessante talen, dus een win win.
 
 ![Rust](https://nickhartjes.github.io/ASD-ADPP-Paradigms/assets/images/rust-logo.png)
+*Afbeelding 01: Rust logo*
 
-## En nu ..
+Zoals we al in [language en paradigma's](#Language and paradigma's) hebben gezien zit valt Rust in meerdere paradigma's. Maar grotendeels word het gebruikt als een functionele programmeertaal die zich focust op veiligheid.
 
-Wat nu, gekozen voor Rust, maar hoe nu verder. Eerst maar eens rondneuzen op de [website](https://rust-lang.org/) van Rust , en daar blijkt tot mijn verbazig dat de documentatie redelijk goed en uitgebreid is, dit tegenover de Java documentatie waar ik altijd met moeite vind wat ik nodig heb. En ik merk dat ik langzaam steeds enthausiaster word. 
-De avonden er op kijk ik elke avond een gedeelte van een Pluralsight cursus over [Rust Fundamentals](https://www.pluralsight.com/courses/rust-fundamentals) gegeven door Dmitri Nesteruk, en dit geeft me steeds meer inzicht in de taal. Tijdens de videos typ ik mee door wat code snippets te runnen in [https://play.rust-lang.org/](https://play.rust-lang.org/).  
+## En nu .. Rust
 
- Tijd voor het echte werk, en moet een onliner installeer ik de laatste versie van Rust op mijn laptop
-`curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh` 
+Wat nu, gekozen voor Rust, maar hoe nu verder. Eerst maar eens rondneuzen op de [website](https://rust-lang.org/) van Rust , en daar blijkt tot mijn verbazing dat de documentatie redelijk goed en uitgebreid is, dit tegenover de Java documentatie waar ik altijd met moeite vind wat ik nodig heb. En ik merk dat ik langzaam steeds enthousiaster word. 
+De avonden er op kijk ik elke avond een gedeelte van een Pluralsight cursus over [Rust Fundamentals](https://www.pluralsight.com/courses/rust-fundamentals) gegeven door Dmitri Nesteruk, en dit geeft me steeds meer inzicht in de taal. Tijdens de video's typ ik mee door wat code snippets te runnen in [https://play.rust-lang.org/](https://play.rust-lang.org/).  
 
-En voeg de Rust plugin toe aan mijn Intellij.
+Tijd voor het echte werk, en moet een één commando installeer ik de laatste versie van Rust op mijn laptop.
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+En met rustup kun je rust up to date houden, meer info kun je krijgen door het onderstaande commando in je terminal te typen.
+```bash
+nickhartjes@XPS-15 ~ rustup show
+Default host: x86_64-unknown-linux-gnu
+rustup home:  /home/nickhartjes/.rustup
+
+stable-x86_64-unknown-linux-gnu (default)
+rustc 1.38.0 (625451e37 2019-09-23)
+```
 
 
 
+En voeg de [Rust plugin](https://plugins.jetbrains.com/plugin/8182-rust) toe aan mijn Intellij. Door de syntax highlighting en de codecompletion maakt het werk toch een stukje aangenamer.
+
+![Intellij](https://nickhartjes.github.io/ASD-ADPP-Paradigms/assets/images/intellij.png)
+*Afbeelding 02: Jetbrains Intellij met Rust plugin*
 
 
-Flow Control Rust vs Java
+
+### Syntax
+
+Elke taal heeft een syntax, een set van regels, principes en processen die de structuur aangeven.Ik wil nu een aantal voorbeelden van Rust geven, en deze vergelijken met Java.
+
+#### variabele binding
+
+In rust kun je een let gebruiken, terwijl het een statische getypte taal is, het type past zich dan automatisch aan. Dit word in Rust 'type interference' genoemd. In Java 9 en lager moet je het type van te voren defineren, in Java 10 en hoger heb je ook de mogelijkheid om van een generieke variabele gebruikt te maken.
+
+Rust:
+
+```rust
+let x = 50;
+```
+
+Java:
+
+```java
+int x = 50;
+
+// Optioneel in Java versie 10 en hoger
+var x = 50;
+```
+
+#### control flows
+
+De control flows zijn redelijk identiek, de rust syntax gebruikt geen haakjes, terwijl dit in Java wel gebruikt word. Een overzicht van de control flows.
+
 
 | Rust                          | Java                              |
 | ----------------------------- | --------------------------------- |
@@ -170,22 +214,172 @@ Flow Control Rust vs Java
 | while _ { _ }                 | while (_) { _ }                   |
 | while let _ = _ { _ }         | while (_ = _) { _ }               |
 
+Je kunt zien dat Rust een veel nieuwere taal is dan Java, ze hebben met kleine verbeteringen de taal veel effectiever gemaakt. Enkel voorbeelden zijn bijv.
+
+##### De for-loop
+
+Rust:
+
 ```rust
-let mut new_length = length.clone() + 1;
+for x in 0..10 {
+    println!("{}", x);
+}
 ```
 
-Syntaxis: vorm
-Aan welke vormregels moet een tekst voldoen om bij de taal te horen?
-Semantiek: betekenis
-Wat doen programma’s in de taal als we deze uitvoeren?
-Pragmatiek: toepassing
-Hoe schrijf je het het beste op, met de gewenste betekenis?
+[Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&code=%0Afn%20main()%20%7B%0A%20%20%20%20for%20x%20in%200..10%20%7B%0A%20%20%20%20%20%20%20%20println!(%22%7B%7D%22%2C%20x)%3B%0A%20%20%20%20%7D%0A%7D)
 
-https://medium.com/@deckarep/paradigms-of-rust-for-the-go-developer-210f67cd6a29
+Java: 
+
+```java
+for (int x = 0; x < 10; x++) {
+    System.out.println( x );
+}
+```
+
+
+
+
+### Semantiek
+
+#### Mutability
+Standaard zijn variabelen inmutable, de waardes kunnen niet veranderen. Dit is gedaan vanuit het veiligheidsoogpunt. Het moet dus een bewuste keuze zijn om iets mutable te maken. Dit kun je uiteindelijk voor elkaar krijgen door het keyword `mut` te gebruiken.
+
+Rust:
+
+```rust
+let x = 50;
+x = 100;
+```
+
+```
+error[E0384]: cannot assign twice to immutable variable `x`
+ --> src/main.rs:4:5
+  |
+3 |     let x = 50;
+  |         -
+  |         |
+  |         first assignment to `x`
+  |         help: make this binding mutable: `mut x`
+4 |     x = 100;
+  |     ^^^^^^^ cannot assign twice to immutable variable
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0384`.
+error: could not compile `playground`.
+
+```
+
+[Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&code=%0Afn%20main()%20%7B%0A%20%20%20%20let%20x%20%3D%2050%3B%0A%20%20%20%20x%20%3D%20100%3B%0A%20%20%20%20println!(%22%7B%7D%22%2C%20x)%3B%0A%7D)
+
+```rust
+let mut x = 50;
+x = 100;
+```
+
+[Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&code=%0Afn%20main()%20%7B%0A%20%20%20%20let%20mut%20x%20%3D%2050%3B%0A%20%20%20%20x%20%3D%20100%3B%0A%20%20%20%20println!(%22%7B%7D%22%2C%20x)%3B%0A%7D)
+
+Bij Java is alles mutable, en kan direct gewijzigd worden.
+
+Java:
+
+```java
+int x = 50;
+x = 100;
+```
+
+#### De match
+
+Een groot verschil tussen de match in Rust en de switch in Java  is dat de match in Rust exhaustive moet zijn. Dit betekent dat hij alle cases die er zijn moet afdekken. Hierdoor heb je zekerheid dat er altijd een branch word gekozen. Bij Java hoeft dit niet, dit levert vooral bij het refactoren van code nog wel eens de nodige issues op.
+
+Rust:
+
+```rust
+let x = 5;
+
+match x {
+    1 => println!("one"),
+    2 => println!("two"),
+    3 => println!("three"),
+    4 => println!("four"),
+    5 => println!("five"),
+    _ => println!("something else"),
+}
+```
+
+[Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&code=%0Afn%20main()%20%7B%0A%20%20%20%20for%20x%20in%200..10%20%7B%0A%20%20%20%20%20%20%20%20println!(%22%7B%7D%22%2C%20x)%3B%0A%20%20%20%20%7D%0A%7D)
+
+Java: 
+
+```java
+switch(x){
+	case 1:
+		System.out.println("one");
+		break;
+	case 2:
+		System.out.println("two");
+		break;
+	case 3:
+		System.out.println("three");
+		break;
+	case 4:
+		System.out.println("four");
+		break;
+	case 5:
+		System.out.println("five");
+		break;
+	case default:
+		System.out.println("something else");
+		break;
+}
+```
+### Pragmatiek
+
+#### enumarate
+In plaats van extern een counter bij te houden in een loop is het mogelijk een geïntegreerde counter van enumerate te gebruiken.
+
+Voorbeeld zonder:
+```rust
+for (index, value) in (5..10).enumerate() {
+    println!("index = {} and value = {}", index, value);
+}
+```
+
+[Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&code=%0Afn%20main()%20%7B%0A%20%20%20%20for%20(index%2C%20value)%20in%20(5..10).enumerate()%20%7B%0A%20%20%20%20%20%20%20%20println!(%22index%20%3D%20%7B%7D%20and%20value%20%3D%20%7B%7D%22%2C%20index%2C%20value)%3B%0A%20%20%20%20%7D%0A%7D)
+
+Voorbeeld Java
+
+```java
+int index = 0;
+for (int i = 5; i < 10; i++) {
+  System.out.println("index =" + index + "and value = " + value);
+}
+```
+
+##### De if-let
+Voordeel van de if-let is dat je geen variabele in de main scope hoeft de definiëren. Als de variabele aan de voorwaarde voldoet word hij gevuld.
+
+Rust:
+
+```rust
+if let Some(x) = option {
+    foo(x);
+}
+```
+
+Java: 
+
+```java
+var b;
+if ( x == y){
+	b = foo(x)
+}
+```
 
 ## De coding challenge
 
 ![Chain of dominoes](https://nickhartjes.github.io/ASD-ADPP-Paradigms/assets/images/circle-of-dominoes.png)
+*Afbeelding 03: Een chain of dominoes*
 
 Iedereen kan wel even wat loopjes schrijven, een struct maken en daarna wijzigen of natuurlijk als eerste 
 ```rust
@@ -193,7 +387,7 @@ fn main() {
   println!("Hello World!");
 }
 ```
-in de rust playground uitvoeren. Maar je leert de taal pas echt wanneer je het doelgericht gaat gebruiken. Omdat dit te bereiken zocht ik een leuke coding challenge, om mezelf uit te dagen. Uiteindelijk kwam ik terecht op de website van [excercism.io](https://exercism.io/). Daar hebben ze meer dan 3000 coding challenges voor 52 verschillende talen. En ook Rust staat er tussen met 92 excercises. De exercises zijn gecategoriseerd met een moeilijkheidsgraad van easy, medium en hard.
+in de rust [playground](https://play.rust-lang.org/) uitvoeren. Maar je leert de taal pas echt wanneer je het doelgericht gaat gebruiken. Omdat dit te bereiken zocht ik een leuke coding challenge, om mezelf uit te dagen. Uiteindelijk kwam ik terecht op de website van [excercism.io](https://exercism.io/). Daar hebben ze meer dan 3000 coding challenges voor 52 verschillende talen. En ook Rust staat er tussen met 92 excercises. De exercises zijn gecategoriseerd met een moeilijkheidsgraad van easy, medium en hard.
 
 Na wat oefeningen bekeken te hebben, valt mijn oog op de volgende opdracht
 
@@ -216,10 +410,14 @@ Tevreden ben ik wanneer ik na afloop alle unit testen op groen heb staan. Dat is
 Ik wil gebruik gaan maken van een adjacency matrix om de domino stenen in bij te houden. Dit geeft me een eenvoudige manier om te zoeken of er domino stenen zijn die aangrenzend zijn.
 
 ![Matrix](https://nickhartjes.github.io/ASD-ADPP-Paradigms/assets/images/paper-matrix.jpg)
+*Afbeelding 04: Matrix op papier, met insert van domino's [1-2, 2-3, 3 -1]*
+
+Als ik bijvoorbeeld een dominosteen zoek die aan een 2 gelegd kan worden, dan hoef ik alleen maar de 2e rij en de 2e kolom na te lopen. En dan vind ik alle stenen die aangelegd zouden kunnen worden.
+Dit zou theoretisch ook met een adjacency list kunnen, alleen zou ik dan een dubbele boekhouding moeten bijhouden. Dan moet `[2, 1]` in de linkedlist van `1` toevoegen en ook in de linkedlist van `2`. Haal ik de domino weg, moet ik ze ook weer beide gaan verwijderen. Dus het brengt extra complexiteit met zich mee. En geen extra voordelen zie, ook niet ten opzichte van tijdscomplexiteit.
 
 ### De eerste stappen 
 
-De eerste stappen zijn het maken van de adjacency matrix en het toevoegen van de domino stenen in de matrix. Initieel zat ik heel erg in de denkwijze van het objectgeorienteerd paradigma. "Oow.. dan moet ik een Struct maken, en daar functionaliteit aan toevoegen zodat ik de state van de struct kan wijzigen."  Maar realiseerde dat dat misschien wel kon, maar niet het doel was van de opdracht, en heb er toen bewust voor gekozen om te proberen om het in het functionele paradigma te houden. Het doel is ook om alle functies [idempotent](https://ldapwiki.com/wiki/Idempotent) te maken. Simpel gezegt, de uitkomst van een functie veranderd niet, ook al roep je deze ontelbaar vaak achter elkaar aan.
+De eerste stappen zijn het maken van de adjacency matrix en het toevoegen van de domino stenen in de matrix. Initieel zat ik heel erg in de denkwijze van het objectgeoriënteerd paradigma. "Oow.. dan moet ik een Struct maken, en daar functionaliteit aan toevoegen zodat ik de state van de struct kan wijzigen."  Maar realiseerde dat dat misschien wel kon, maar niet het doel was van de opdracht, en heb er toen bewust voor gekozen om te proberen om het in het functionele paradigma te houden. Het doel is ook om alle functies [idempotent](https://ldapwiki.com/wiki/Idempotent) te maken. Simpel gezegd, de uitkomst van een functie veranderd niet, ook al roep je deze ontelbaar vaak achter elkaar aan.
 
 ~~~rust
 use crate::MatrixActions::{ADD, REMOVE};
@@ -262,7 +460,7 @@ fn update_matrix(domino: (u8, u8), matrix: Vec<Vec<u8>>, action: MatrixActions) 
 }
 ~~~
 
-Toen liep ik eigenlijk tegen het eerste probleem aan, als IDE gebruik [IntelliJ](https://www.jetbrains.com/idea/) van Jetbrain, met de Rust plugin. Dat werkte tot nu toe perfect.. alleen werkt de debugger niet. Hoe moest ik nu controlleren of mijn matrix wel correct gevuld werd. Dus uiteindelijk maar een print functie toegevoegd die de 2d Vector weergeeft in de output. 
+Toen liep ik eigenlijk tegen het eerste probleem aan, als IDE gebruik [IntelliJ](https://www.jetbrains.com/idea/) van Jetbrain, met de Rust plugin. Dat werkte tot nu toe perfect.. alleen werkt de debugger niet. Hoe moest ik nu controleren of mijn matrix wel correct gevuld werd. Dus uiteindelijk maar een print functie toegevoegd die de 2d Vector weergeeft in de output. 
 
 ~~~rust
 fn print_matrix(matrix: Vec<Vec<u8>>) {
@@ -291,14 +489,13 @@ fn print_matrix(matrix: Vec<Vec<u8>>) {
 }
 ~~~
 
-De matrix representeerd welke dominoes nog beschikbaar zijn. Normaal zou ik niet direct naar de print of prinln wat schrijven, eerder naar een logger. Maar voor deze case vond ik het eigenlijk goed genoeg. 
+De matrix representeert welke domino's nog beschikbaar zijn. Normaal zou ik niet direct naar de print of prinln wat schrijven, eerder naar een logger. Maar voor deze case vond ik het eigenlijk goed genoeg. 
 
-### Het zoek algorimte 
+### Het zoek algoritme 
 
-Het idee is om een recursieve functie te maken, die 1 domino als variabele krijgt. Vervolgens word in de matrix gecontrolleerd welke dominoes er op de tweede waarde van de domino variable kunnen worden aangesloten. 
-Deze dominoes worden worden dan vervolgens gebruikt in de recursive functie. Zo word er stap voor stap een Vector gecrieerd met een lijst van aan een sluitende dominoes.
-Wanneer de recursive functie detecteerd dat het einddoel is bereikt, dus een path van de volledige lengte van de input slice, en dat de eerste waarde van de eerste domino en laatste waarde van de laatste domino in de Vector ook op elkaar aansluiten, dan stopt de recursive functie. 
-En word de path teruggestuurd.
+Het idee is om een recursieve functie te maken, die 1 domino als variabele krijgt. Vervolgens word in de matrix gecontroleerd welke domino's er op de tweede waarde van de domino variabele kunnen worden aangesloten. 
+Deze domino's worden worden dan vervolgens gebruikt in de recursive functie. Zo word er stap voor stap een Vector gecreëerd met een lijst van aaneensluitende domino's.
+Wanneer de recursive functie detecteert dat het einddoel is bereikt, dus een path van de volledige lengte van de input slice, en dat de eerste waarde van de eerste domino en laatste waarde van de laatste domino in de Vector ook op elkaar aansluiten, dan stopt de recursive functie. En word de path teruggestuurd.
 
 ~~~rust
 pub fn chain(input: &[(u8, u8)]) -> Option<Vec<(u8, u8)>> {
@@ -398,19 +595,20 @@ fn search_in_row(row_number: u8, matrix: Vec<Vec<u8>>) -> Vec<(u8, u8)> {
 }
 ~~~
 
-[Dominoes uitwerking op repl.it](https://repl.it/@nickhartjes/ASD-ADPP-Paradigms-Rust-Dominoes-Exercise)
+[Domino's uitwerking op repl.it](https://repl.it/@nickhartjes/ASD-ADPP-Paradigms-Rust-Dominoes-Exercise)
 [Source code op Github.com](https://github.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise)
 
-Helaas kon ik `cargo test` niet runnen op repl.it. Dus repl.it is wel ideaal om de applicatie te delen en online uit te voeren, maar niet ideaal om geautotiseerd mee te bouwen en te testen. Dus daarom heb ik ook gebruik gemaakt van de build runner van Github en Travis-CI om geautomatiseerd de code te builden, testen en uit te voeren.
-[Build runner / action in Github.com](https://github.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise/commit/7f70b8a457082b7d940868f8c3368ea06dce4aba/checks?check_suite_id=323149345)
-[Build runner in Travis-CI](https://travis-ci.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise/builds/137675737)
+Helaas kon ik `cargo test` niet runnen op repl.it. Dus repl.it is wel ideaal om de applicatie te delen en online uit te voeren, maar niet ideaal om geautomatiseerd mee te bouwen en te testen. Dus daarom heb ik ook gebruik gemaakt van de build runner van Github en Travis-CI om geautomatiseerd de code te builden, testen en uit te voeren.
+[Build runner / action in Github.com](https://github.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise/runs/315996637)
+[Build runner in Travis-CI](https://travis-ci.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise/builds/137766750)
 
 ### Tijd op
 
-En.. doel gehaald ? Nee, helaas ben ik gestruikeld net voor de finishlijn. Van de 12 testen zijn er 10 geslaagd. Op dit moment gaat het nog mis met dubbele dominoes waardes zoals `[1,2] & [1,2]`
+En.. doel gehaald ? Nee, helaas ben ik gestruikeld net voor de finishlijn. Van de 12 testen zijn er 10 geslaagd. Op dit moment gaat het nog mis met dubbele domino's waardes zoals `[1,2] & [1,2]`
  Terwijl er het volgende duidelijk in de opdracht staat:
 
-Some test cases may use duplicate stones in a chain solution, assume that multiple Domino sets are being used.
+> Some test cases may use duplicate stones in a chain solution, assume that multiple Domino sets are being used.
+>
 
 Op dit moment maak ik gebruik van een `0` of een `1` in mijn matrix. Een `0` wanneer er geen domino is, en een `1` wanneer er wel een domino is. Geen echte binaire waarde, maar wel het idee.
 Dus bij het toevoegen van een 2e domino met een identieke waarde word nu de `1` overschreven met een nieuwe `1`. 
@@ -424,13 +622,20 @@ Uiteindelijk zou dit nog wel redelijk makkelijk te repareren zijn door het toevo
     };
 ```
 
-Zo zou je meerdere dominoes met dezelfde waarde in de matrix kunnen bijhouden. Waarschijnlijk zou je nog wel wat andere code moeten aanpassen om het werkende te krijgen. Maar gelukkig hebben we de testen om te zien of er dan niets breekt.
+Zo zou je meerdere domino's met dezelfde waarde in de matrix kunnen bijhouden. Waarschijnlijk zou je nog wel wat andere code moeten aanpassen om het werkende te krijgen. Maar gelukkig hebben we de testen om te zien of er dan niets breekt.
 
-### Bronnen voor het blog
+## Conclusie
+Rust heeft een hele fijne indruk op me achtergelaten. Niet alleen ben ik redelijk snel gewend geraakt aan de syntax en semantiek, maar aan het hele ecosysteem. Versies van Rust die makkelijk te updaten zijn, en out of the box word `cargo` meegeleverd.
+En `cargo` is echt een Zwitsers zakmes. Waar je in Java meerder tools nodig hebt, zoals Maven, Gradle, Sonarqube om een bepaalde kwaliteitsstandaard te halen, zitten al veel features bij default al in `cargo`.
 
-Programmeerparadigma. (2018, February 7). Retrieved from https://nl.wikipedia.org/wiki/Programmeerparadigma.
+- cargo test = om de testen te runnen
+- cargo build = om de build te starten
+- cargo doc = om documentatie te genereren
+- cargo fmt = een code formater
+- cargo clippy = een code linter
 
-Comparison of programming languages. (2019, October 10). Retrieved from https://en.wikipedia.org/wiki/Comparison_of_programming_languages.
+Wat ik ook een grote plus vond, is dat de error meldingen van de compiler heel duidelijk en leesbaar worden weergegeven. Geen rare stacktrace, maar een goede en vaak duidelijke melding  en advies.
+Hierdoor is de instap een stuk prettiger.
 
+Moet er dus binnenkort wat gebouwd worden in een een low level snelle taal, dan is Rust ten zeerste aan te bevelen. 
 
-https://llogiq.github.io/2016/02/28/java-rust.html	
