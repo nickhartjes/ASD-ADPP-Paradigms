@@ -1,3 +1,5 @@
+
+
 # Rust roest
 
 [toc]
@@ -37,7 +39,7 @@ Bij **logisch programmeren**, gebaseerd op (doorgaans) predicatenlogica, zijn he
 
 Om makkelijker te kunnen kiezen heb ik een shortlist gemaakt van potentiele talen, en een overzicht gemaakt van paradigma's waarin deze talen vallen.
 
-
+##### Language and paradigma's
 | Language | Intended use                  | Imperative | Object-oriented | Functional | Procedural | Generic | Reflective | Event-driven | Other paradigm(s)            | Standardized?                                            |
 | -------- | ----------------------------- | ---------- | --------------- | ---------- | ---------- | ------- | ---------- | ------------ | ---------------------------- | -------------------------------------------------------- |
 | Clojure  | General                       |            |                 | Yes        |            |         |            |              | concurrent                   | No                                                       |
@@ -139,6 +141,8 @@ Nadat ik alle resultaten naast elkaar heb gezet blijken R, Rust en Scala de mees
 
 ![Rust](https://nickhartjes.github.io/ASD-ADPP-Paradigms/assets/images/rust-logo.png)
 
+Zoals we al in [language en paradigma's](#Language and paradigma's) hebben gezien zit valt Rust in meerdere paradigma's. Maar grootendeels word het gebruikt als een functionele programmeertaal die zich focust op veiligheid.
+
 ## En nu ..
 
 Wat nu, gekozen voor Rust, maar hoe nu verder. Eerst maar eens rondneuzen op de [website](https://rust-lang.org/) van Rust , en daar blijkt tot mijn verbazig dat de documentatie redelijk goed en uitgebreid is, dit tegenover de Java documentatie waar ik altijd met moeite vind wat ik nodig heb. En ik merk dat ik langzaam steeds enthausiaster word. 
@@ -147,13 +151,41 @@ De avonden er op kijk ik elke avond een gedeelte van een Pluralsight cursus over
  Tijd voor het echte werk, en moet een onliner installeer ik de laatste versie van Rust op mijn laptop
 `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh` 
 
-En voeg de Rust plugin toe aan mijn Intellij.
+En voeg de Rust plugin toe aan mijn Intellij. Door de syntax highlighting en de code-completion 	maakt het mijn werk toch een stukje aangenamer
+
+![Intellij](https://nickhartjes.github.io/ASD-ADPP-Paradigms/assets/images/intellij.png)
 
 
 
+## Syntax
 
+Elke taal heeft een syntax, een set van regels, principes en processen die de structuur aangeven.
+Ik wil nu een aantal voorbeelden van Rust geven, en deze vergelijken met Java.
 
-Flow Control Rust vs Java
+#### variabele binding
+
+In rust kun je een let gebruiken, terwijl het een statische getypte taal is, het type past zich dan automatisch aan. Dit word in Rust 'type interference' genoemd.  
+In Java 9 en lager moet je het type van te voren defineren, in Java 10 en hoger heb je ook de mogelijkheid om van een generieke variabele gebruikt te maken.
+
+Rust:
+
+```rust
+let x = 50;
+```
+
+Java:
+
+```java
+int x = 50;
+
+// Optioneel in Java versie 10 en hoger
+var x = 50;
+```
+
+#### control flows
+
+De control flows zijn redelijk identiek, de rust syntax gebruikt geen haakjes, terwijl dit in Java wel gebruikt word. Een overzicht van de control flows.
+
 
 | Rust                          | Java                              |
 | ----------------------------- | --------------------------------- |
@@ -170,9 +202,141 @@ Flow Control Rust vs Java
 | while _ { _ }                 | while (_) { _ }                   |
 | while let _ = _ { _ }         | while (_ = _) { _ }               |
 
+Je kunt zien dat Rust een veel nieuwe taal is dan Java, ze hebben met kleine verbeteringen de taal veel effectiever gemaakt. Enkel voorbeelden zijn bv.
+
+##### De for-loop
+
+Rust:
+
 ```rust
-let mut new_length = length.clone() + 1;
+for x in 0..10 {
+    println!("{}", x);
+}
 ```
+
+Java: 
+
+```java
+for (int x = 0; x < 10; x++) {
+    System.out.println( x );
+}
+```
+
+##### De if-let
+
+Rust:
+
+```rust
+if let Some(x) = option {
+    foo(x);
+}
+```
+
+Java: 
+
+```java
+var b;
+if ( x == y){
+	b = foo(x)
+}
+```
+
+
+## Semantiek
+
+#### mutability
+Standaard zijn variabelen inmutable, de waardes kunnen niet veranderen. Dit is gedaan vanuit het veiligheids oogpunt. Het moet dus een bewuste keuze zijn om iets mutable te maken. Dit kun je uiteindelijk voor elkaar krijgen door het keyword `mut` te gebruiken.
+
+Rust:
+
+```rust
+let x = 50;
+x = 100;
+```
+
+```
+error[E0384]: cannot assign twice to immutable variable `x`
+ --> src/main.rs:4:5
+  |
+3 |     let x = 50;
+  |         -
+  |         |
+  |         first assignment to `x`
+  |         help: make this binding mutable: `mut x`
+4 |     x = 100;
+  |     ^^^^^^^ cannot assign twice to immutable variable
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0384`.
+error: could not compile `playground`.
+
+```
+
+[Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&code=%0Afn%20main()%20%7B%0A%20%20%20%20let%20x%20%3D%2050%3B%0A%20%20%20%20x%20%3D%20100%3B%0A%20%20%20%20println!(%22%7B%7D%22%2C%20x)%3B%0A%7D)
+
+```rust
+let mut x = 50;
+x = 100;
+```
+
+[Playground](https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&code=%0Afn%20main()%20%7B%0A%20%20%20%20let%20mut%20x%20%3D%2050%3B%0A%20%20%20%20x%20%3D%20100%3B%0A%20%20%20%20println!(%22%7B%7D%22%2C%20x)%3B%0A%7D)
+
+Bij Java is alles mutable, en kan direct gewijzigd worden.
+
+Java:
+
+```java
+int x = 50;
+x = 100;
+```
+
+##### De match
+
+Een groot verschil tussen de match in Rust en de switch in Java  is dat de match in Rust exhaustive moet zijn. Dit betekent dat hij alle cases die er zijn moet afdekken. Hierdoor heb je zekerheid dat er altijd een branch word gekozen. Bij Java hoeft dit niet, dit levert vooral bij het refactoren van code nog wel eens de nodige issues op.
+
+Rust:
+
+```rust
+let x = 5;
+
+match x {
+    1 => println!("one"),
+    2 => println!("two"),
+    3 => println!("three"),
+    4 => println!("four"),
+    5 => println!("five"),
+    _ => println!("something else"),
+}
+```
+
+Java: 
+
+```java
+switch(x){
+	case 1:
+		System.out.println("one");
+		break;
+	case 2:
+		System.out.println("two");
+		break;
+	case 3:
+		System.out.println("three");
+		break;
+	case 4:
+		System.out.println("four");
+		break;
+	case 5:
+		System.out.println("five");
+		break;
+	case default:
+		System.out.println("something else");
+		break;
+}
+```
+
+
+## 
 
 Syntaxis: vorm
 Aan welke vormregels moet een tekst voldoen om bij de taal te horen?
