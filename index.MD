@@ -137,6 +137,8 @@ Je kunt je natuurlijk de vraag stellen of het belangrijk is, of een taal populai
 
 Nadat ik alle resultaten naast elkaar heb gezet blijken R, Rust en Scala de meest populaire talen van de shortlist. Uiteindelijk heb ik gekozen, zoals de titel waarschijnljik al wel doet vermoeden, voor Rust. De reden hiervoor is dat het als "mosted loved" taal uit de Stackoverflow survey komt, en het stond samen met [GO](https://golang.org/) al eerder op mijn lijst als intressante talen, dus een win win.
 
+![Rust](https://nickhartjes.github.io/ASD-ADPP-Paradigms/assets/images/rust-logo.png)
+
 ## En nu ..
 
 Wat nu, gekozen voor Rust, maar hoe nu verder. Eerst maar eens rondneuzen op de [website](https://rust-lang.org/) van Rust , en daar blijkt tot mijn verbazig dat de documentatie redelijk goed en uitgebreid is, dit tegenover de Java documentatie waar ik altijd met moeite vind wat ik nodig heb. En ik merk dat ik langzaam steeds enthausiaster word. 
@@ -181,9 +183,52 @@ Hoe schrijf je het het beste op, met de gewenste betekenis?
 
 https://medium.com/@deckarep/paradigms-of-rust-for-the-go-developer-210f67cd6a29
 
-## De programmeer uitdaging
+## De coding challenge
 
-Ik vond
+![Chain of dominoes](https://nickhartjes.github.io/ASD-ADPP-Paradigms/assets/images/circle-of-dominoes.png)
+
+Iedereen kan wel even wat loopjes schrijven, een struct maken en daarna wijzigen of natuurlijk als eerste 
+```rust
+fn main() {
+  println!("Hello World!");
+}
+```
+in de rust playground uitvoeren. Maar je leert de taal pas echt wanneer je het doelgericht gaat gebruiken. Omdat dit te bereiken zocht ik een leuke coding challenge, om mezelf uit te dagen. Uiteindelijk kwam ik terecht op de website van [excercism.io](https://exercism.io/). Daar hebben ze meer dan 3000 coding challenges voor 52 verschillende talen. En ook Rust staat er tussen met 92 excercises. De exercises zijn gecategoriseerd met een moeilijkheidsgraad van easy, medium en hard.
+
+Na wat oefeningen bekeken te hebben, valt mijn oog op de volgende opdracht
+
+~~~
+Make a chain of dominoes.
+
+Compute a way to order a given set of dominoes in such a way that they form a correct domino chain (the dots on one half of a stone match the dots on the neighbouring half of an adjacent stone) and that dots on the halves of the stones which don't have a neighbour (the first and last stone) match each other.
+
+For example given the stones `[2|1]`, `[2|3]` and `[1|3]` you should compute something like `[1|2] [2|3] [3|1]` or `[3|2] [2|1] [1|3]` or `[1|3] [3|2] [2|1]` etc, where the first and last numbers are the same.
+
+For stones `[1|2]`, `[4|1]` and `[2|3]` the resulting chain is not valid: `[4|1] [1|2] [2|3]`'s first and last numbers are not the same. 4 != 3
+
+Some test cases may use duplicate stones in a chain solution, assume that multiple Domino sets are being used.
+~~~
+
+Deze gaat het worden, leuk en toch uitdagend. Binnen 5 uur wil ik het oplossen, veel ruimer dan ik het met Java zou inschatten, maar bij voorbaat neem ik de tijd wat ruimer om de taal te kunnen ontdekken. De uitdaging wil ik met een graph gaan oplossen, dit heb ik vaker gedaan in Java, maar ik snap het datastructuur dus wil het nu implementeren in Rust.
+Tevreden ben ik wanneer ik na afloop alle unit testen op groen heb staan. Dat is wel 1 van de voordelen van exercism.io, bij elke opdracht krijg je een opzet van een project en daarbij behorende unittesten om te valideren of je opdracht succesvol is.
+
+- **S**pecifiek - De opdracht is duidelijk omschreven.
+- **M**eetbaar - Succesvol wanneer alle unittesten groen zijn
+- **A**cceptabel - De coding challenge is goedgekeurd door de Docent
+- **R**ealistisch - Na een kleine analyse haalbaar, ondanks het gebrek van kennis over de taal Rust.
+- **T**ijdgebonden - Binnen 5 uur
+
+Ik plaats de start code in mijn eigen repository op [Github.com](https://github.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise) en ga aan de slag.
+
+
+
+
+[Dominoes uitwerking op repl.it](https://repl.it/@nickhartjes/ASD-ADPP-Paradigms-Rust-Dominoes-Exercise)
+
+[Source code op Github.com](https://github.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise)
+[Build runner / action in Github.com](https://github.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise/commit/7f70b8a457082b7d940868f8c3368ea06dce4aba/checks?check_suite_id=323149345)
+
+[Build runner in Travis-CI](https://travis-ci.com/nickhartjes/ASD-ADPP-Paradigms-Rust-Exercise/builds/137675737)
 
 ### Bronnen voor het blog
 
@@ -192,4 +237,4 @@ Programmeerparadigma. (2018, February 7). Retrieved from https://nl.wikipedia.or
 Comparison of programming languages. (2019, October 10). Retrieved from https://en.wikipedia.org/wiki/Comparison_of_programming_languages.
 
 
-https://llogiq.github.io/2016/02/28/java-rust.html
+https://llogiq.github.io/2016/02/28/java-rust.html	
