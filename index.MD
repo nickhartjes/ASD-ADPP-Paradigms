@@ -2,6 +2,9 @@
 
 # Rust roest
 
+[TOC]
+
+
 ## Inleiding
 
 "Rust roest" en dan heb ik het niet over de [televisieserie](https://nl.wikipedia.org/wiki/Rust_roest_(televisieserie)), maar dan heb ik het over het [spreekwoord](https://www.dbnl.org/tekst/stoe002nede01_01/stoe002nede01_01_2040.php). Het spreekwoord is ontleent aan ijzer, dat wanneer het gebruikt word blank blijft, maar wanneer het stil ligt gaat roesten. Dit gaat natuurlijk ook op in de wereld van programmeurs. Er blijft een continue stroom van nieuwe informatie komen, nieuwe technieken, andere talen, meer gespecialiseerde frameworks, handige tools en ga zo maar door. Want zwem je niet met de stroom mee, dan ga je roesten. Gedoemd tot een leven lang leren? Of steeds een nieuwe uitdaging om enthousiast van te worden. In mijn blog wil ik jullie meenemen in een nieuwe uitdaging die ik mezelf gegeven heb.
@@ -15,7 +18,7 @@ In mijn dagelijks werkzaamheden gebruik ik hoofdzakelijk Java, en daarnaast af e
 
 > In de informatica zijn programmeerparadigma's denkpatronen of uitgesproken concepten van programmeren, die voornamelijk verschillen in de wijze van aanpak om het gewenste resultaat te kunnen behalen.
 
-#### Gangbare paradigma's
+### Gangbare paradigma's
 De belangrijkste programmeerparadigma's zijn:
 
 - Imperatief programmeren
@@ -30,8 +33,6 @@ In **imperatief programmeren** is een programma in essentie een reeks instructie
 Bij **logisch programmeren**, gebaseerd op (doorgaans) predicatenlogica, zijn het definities van predicaten die een bepaalde relatie tussen objecten in het geheugen uitdrukken.
 
 **Objectgeoriënteerd programmeren** (object oriented programming) verenigt berekening en de gegevens: deze worden verpakt in objecten, waarbij de details worden verborgen achter een algemene interface, vaak gerangschikt in een hiërarchie van klassen. Objecten sturen elkaar berichten (Smalltalk) of roepen elkaars methoden aan (C++, Java); alleen zo hebben ze toegang tot elkaars gegevens. De methoden/reacties op berichten zijn procedures die de interne gegevens van een object manipuleren.
-
-
 
 ### De keuze
 
@@ -175,7 +176,7 @@ En voeg de [Rust plugin](https://plugins.jetbrains.com/plugin/8182-rust) toe aan
 
 Elke taal heeft een syntax, een set van regels, principes en processen die de structuur aangeven.Ik wil nu een aantal voorbeelden van Rust geven, en deze vergelijken met Java.
 
-#### variabele binding
+#### Variabele binding
 
 In rust kun je een let gebruiken, terwijl het een statische getypte taal is, het type past zich dan automatisch aan. Dit word in Rust 'type interference' genoemd. In Java 9 en lager moet je het type van te voren defineren, in Java 10 en hoger heb je ook de mogelijkheid om van een generieke variabele gebruikt te maken.
 
@@ -194,7 +195,7 @@ int x = 50;
 var x = 50;
 ```
 
-#### control flows
+#### Control flows
 
 De control flows zijn redelijk identiek, de rust syntax gebruikt geen haakjes, terwijl dit in Java wel gebruikt word. Een overzicht van de control flows.
 
@@ -216,7 +217,7 @@ De control flows zijn redelijk identiek, de rust syntax gebruikt geen haakjes, t
 
 Je kunt zien dat Rust een veel nieuwere taal is dan Java, ze hebben met kleine verbeteringen de taal veel effectiever gemaakt. Enkel voorbeelden zijn bijv.
 
-##### De for-loop
+#### De for-loop
 
 Rust:
 
@@ -335,7 +336,7 @@ switch(x){
 ```
 ### Pragmatiek
 
-#### enumarate
+#### Enumarate
 In plaats van extern een counter bij te houden in een loop is het mogelijk een geïntegreerde counter van enumerate te gebruiken.
 
 Voorbeeld zonder:
@@ -356,7 +357,7 @@ for (int i = 5; i < 10; i++) {
 }
 ```
 
-##### De if-let
+#### De if-let
 Voordeel van de if-let is dat je geen variabele in de main scope hoeft de definiëren. Als de variabele aan de voorwaarde voldoet word hij gevuld.
 
 Rust:
@@ -638,4 +639,3 @@ Wat ik ook een grote plus vond, is dat de error meldingen van de compiler heel d
 Hierdoor is de instap een stuk prettiger.
 
 Moet er dus binnenkort wat gebouwd worden in een een low level snelle taal, dan is Rust ten zeerste aan te bevelen. 
-
